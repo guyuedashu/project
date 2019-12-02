@@ -1,0 +1,921 @@
+/* 
+    @设置规则
+        @chartset  设置样式编码
+        @import    导入其他样式文件
+        @meida     媒体查询
+        @font-face 自定义字体图标
+*/
+@import 'reset.css';
+@font-face {
+    /* format 提前告知浏览器格式，，浏览器会选择自己能加载的下载，，不会全部下载 */
+    font-family: 'iconfont';
+    /* eto  为IE私有格式 */
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+        /* woff  为网页字体  推荐使用  更加小快速  */
+        url('../font/iconfont.woff2') format('woff2'),
+        url('../font/iconfont.woff') format('woff'),
+        /* 系统自带字体 */
+        url('../font/iconfont.ttf') format('truetype'),
+        /* SVG 图形技术 非常牛逼  IE9+支持 */
+        url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+font-family: "iconfont" !important;
+font-size: 16px;
+font-style: normal;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+/* 头部 */
+#header li{
+    float: left;
+    line-height: 35px;
+    padding: 0 6px;
+    font-size: 0;
+}
+#header a{
+    color: #6c6c6c;
+    font-size: 12px;
+}
+#header a:hover{
+    color: #f40;
+}
+
+#header .login{
+    color: #f22e00;
+}
+#header span{
+    font-size: 12px;
+}
+#header span.arrow{
+   margin-left: 7px;
+}
+#header a.login{
+    margin-right: 7px;
+ }
+ #header li strong{
+    font-size: 12px;
+    color: #f22e00;
+ }
+ #header li.line{
+    font-size: 12px;
+    color: #ddd
+ }
+
+.arrow{
+    font-size: 5px;
+}
+.ten{
+    font-size: 10px;
+    margin-right: 5px;
+}
+.collect{
+    font-size: 10px; 
+}
+
+#headerAdvert{
+    background-color: #f12404;
+}
+#headerAdvert .go{
+    display: block;
+    padding: 10px 10px 10px 15px;
+}
+#headerAdvert li img{
+ 
+    width: 80px;
+    height: 80px;
+}
+#headerAdvert li{
+    float: left;
+    width: 207px;
+    height: 75px;
+    margin-right: 10px;
+    padding: 12px 15px 0 15px;
+    box-sizing: border-box;
+    margin-right: 10px;
+
+}
+#headerAdvert ul{
+    padding-top: 13px;
+    margin-right: 0px;
+}
+#headerAdvert li.item1{
+    background: rebeccapurple;
+}
+#headerAdvert li.item2{
+    background: green;
+}
+#headerAdvert li.item3{
+    background: dodgerblue;
+}
+#headerAdvert li.item4{
+    background: orange;
+}
+#headerAdvert li.item5{
+    background: pink;
+    margin-right: 0px;
+}
+#headerAdvert li h3{
+    font-size: 20px;
+    line-height: 28px;
+}
+#headerAdvert li a{
+    color: #fff;
+   
+}
+#headerAdvert li p{
+    font-size: 14px;
+    line-height: 20px;
+        /* float: right; */
+}
+#headerAdvert li a img{
+    width: 52px;
+    height: 52px;
+    border-radius: 5px;
+}
+
+/* 搜索 */
+#searchInfo {
+    background-color: #fff;
+    padding: 24px 0 10px 0;
+}
+#searchInfo h1 a{
+    display: block;
+    width: 190px;
+    height: 58px;
+    background: url(../img/logo.png) 0 0 no-repeat;
+    /* 首航缩进  已图换字  */
+    text-indent: -9999px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+#searchInfo .code{
+    width: 72px;
+    height: 86px;
+    border: 1px solid #eee;
+    position: relative;
+    text-align: center;
+    margin-right:110px;
+}
+#searchInfo .code img{
+    width: 62px;
+    height: 62px;
+}
+#searchInfo .code .close{
+   position: absolute;
+   width: 14px;
+   height: 14px;
+   line-height: 14px;
+   border: 1px solid #eee;
+   left: -16px;
+   top: -1px;
+   color: #ddd;
+   cursor: pointer;
+}
+#searchInfo .search {
+    width: 630px;
+    margin: 0 auto;
+}
+#searchInfo .search .searchTop{
+    height: 22px;
+    padding-left: 19px;
+}
+#searchInfo .search .searchTop li{
+    /* height: 22px; */
+    float: left;
+    width: 36px;
+    line-height: 22px;
+    text-align: center;
+    color: #f40;
+    cursor: pointer;
+    margin-right: 4px;
+}
+#searchInfo .search .searchTop li:hover{
+    background-color: #ffeee5;
+}
+#searchInfo .search .searchTop li.active{
+    font-weight: bold;
+    color: #fff;
+    border-radius: 6px 6px 0 0;
+    /* IE6 IE7  实现渐变 */
+    filter:  progid:DXImageTransform.Microsoft.gradient( GradientType= 1 , startColorstr = '#ff9000', endColorstr = '#ff5000' ); /* IE6 & IE7 */
+    /* linear-gradien  IE1默以上兼容  认为  to bottom 从上到下 */
+    background-image: linear-gradient(to right,#ff9000,#ff5000);
+}
+#searchInfo .search .searchContent{
+    height: 40px;
+}
+#searchInfo .search .searchContent .searchBox{
+    position: relative;
+    width:554px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #ff5000;
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+} 
+.searchContent .searchBox input{
+    width: 490px;
+    height: 36px;
+    line-height: 36px;
+    outline: none;
+    border: none;
+    /* 缩进 */
+    text-indent: 10px;
+    position: absolute;
+    z-index: 1;
+    /* 设置透明 */
+    background-color: transparent;
+}
+.searchContent .searchBox .placeholer{
+    position: absolute;
+    top: 6px;
+    left: 14px;
+}
+.searchContent .searchBox .placeholer span{
+   color: #9c9c9c;
+   vertical-align: 1px;
+}
+.searchContent .searchBox .pic{
+    position: absolute;
+    right: 20px;
+    font-size: 28px;
+    color: #9c9c9c;
+    top: -2px;
+    cursor: pointer;
+ }
+ .searchContent .btn button{
+     width: 74px;
+     height: 40px;
+     text-align: center;
+     font-size: 18px;
+     color: #fff;
+     line-height: 40px;
+     border: none;
+     border-radius: 0 20px 20px 0;
+     /* IE6 IE7  实现渐变 */
+     filter:  progid:DXImageTransform.Microsoft.gradient( GradientType= 1 , startColorstr = '#ff9000', endColorstr = '#ff5000' ); /* IE6 & IE7 */
+     /* linear-gradien  IE1默以上兼容  认为  to bottom 从上到下 */
+     background-image: linear-gradient(to right,#ff9000,#ff5000);
+     cursor: pointer;
+ }
+ #searchInfo .search .hotKey{
+     height: 25px;
+     line-height: 25px;
+ }
+ #searchInfo .search .hotKey a:hover{
+    color:#f50 ;
+}
+/* 导航 */
+#navigation h2{
+    width: 190px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background-color: #f50;
+}
+#navigation ul{
+    margin-left: 190px;
+    height: 30px;
+    /* 触发BFC */
+    /* overflow: hidden; */
+    /* calc  支持任意符号
+        IE 9+
+    */
+    width: calc(100% - 190px);
+    /* IE6 IE7  实现渐变 */
+    filter:  progid:DXImageTransform.Microsoft.gradient( GradientType= 1 , startColorstr = '#ff9000', endColorstr = '#ff5000' ); /* IE6 & IE7 */
+    /* linear-gradien  IE1默以上兼容  认为  to bottom 从上到下 */
+    background-image: linear-gradient(to right,#ff9000,#ff5000);
+    cursor: pointer;
+}
+#navigation ul li{
+    position: relative;
+    float: left;
+    height: 30px;
+
+    line-height: 30px;
+    margin: 0 7px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+#navigation ul li.size{
+    font-size: 16px;
+}
+#navigation ul li a{
+    color: #fff;
+}
+#navigation ul li:hover::before{
+    /* &#x35ba; */
+    content: '\35ba';
+    position: absolute;
+    color: #f50;
+    font-family: iconfont !important;
+    font-size: 25px;
+    top: -22px;
+    margin-left: -15px;
+    left: 50%;
+}
+/* <!-- 首屏 -->  .first-l 左*/
+.first-l{
+    width:890px;
+}
+.first-l .side-nav{
+    width: 190px;
+    height: 520px;
+    background: #fff;
+    border: 1px solid #ff5000;
+    border-top: none;
+    box-sizing: border-box;
+    padding-top: 5px;
+}
+.first-l .side-nav li{
+    height: 32px;
+    line-height: 32px;
+    padding-left: 25px;
+    transition: background-color 0.5s;
+}
+.first-l .side-nav li:hover{
+    background-color: #ffe4dc;
+}
+.first-l .side-nav li:hover a{
+    color: #f50;
+}
+.first-l .side-nav li a:hover{
+    text-decoration: underline;
+}
+.first-l .side-nav a{
+    font-size: 14px;
+    color: #666;
+}
+/* <!-- 图片 1 --> */
+.first-l .img-one{
+    width: 690px;
+    height: 290px;
+}
+.first-l .img-one{
+    margin-top: 10px;
+}
+.first-l .pic-l{
+    width: 520px;
+    position: relative;
+}
+.first-l .pic-l .toggle{
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(0,0,0,0.7);
+    text-align: center;
+    top: 50%;
+    padding: 0
+}
+.first-l .pic-l .toggle.toggle-r{
+    right: 0;
+    border-radius: 15px 0 0 15px;
+}
+.first-l .pic-l .toggle.toggle-l{
+    border-radius: 0 15px 15px 0;
+}
+.first-l .pic-l .img:hover .toggle{
+    display: block;
+}
+.first-l .circle{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 1px;
+}
+.first-l .circle span{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.first-l .circle span.active{
+    background-color: red;
+}
+.first-l .img-one .ad-r img{
+    width: 160px;
+
+}
+
+/* <!-- 图片 2 --> */
+.first-l .img-two{
+    width: 690px;
+    height: 220px;
+    /* padding-top: 5px; */
+    box-sizing: border-box;
+}
+.first-l .img-two .pic-title{
+    height:17px;
+}
+.base64{
+    background-image: url("data:image/png;base64,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");
+    width: 136px;
+    position: absolute;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-position: 2px 0;
+    background-size: 122px 22px;
+}
+.img-two .pic-title .cat{
+    position: relative;
+    margin-left: 136px;
+    color: #666;
+}
+.img-two .pic-title strong{
+    position: absolute;
+    right: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+.img-two .pic-title .index{
+    color: #ff1648;
+}
+.img-two .line{
+    height: 3px;
+    background-color: #ff1648;
+    position: relative;
+}
+.img-two .line span{
+    display: inline-block;
+    width: 87px;
+    height: 3px;
+    position: absolute;
+    background-color: #000;
+}
+.img-two .img {
+    width: 520px;
+    height: 200px;
+    background-color: #fff;
+
+    /* 变成表格  内容都会 垂直居中 */
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+
+    /* flex  竖直 水平 居中 */
+    /* display: flex;
+    justify-content: space-around; 水平
+    align-items: center;  竖直*/  
+}
+.img-two .img img{
+    margin: 0 4px;
+}
+.img-two .ad-r p{
+    height: 20px;
+    line-height: 20px;
+    color: #666;
+}
+    
+/* <!-- 淘宝头条 1 --> */
+.first-l .new{
+    width: 890px;
+    height: 100px;
+    background:#fff;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 13px 13px 13px ;
+
+}
+.first-l .new .hd{
+    margin-top: 10px;
+}
+.first-l .new .hd p{
+    color: #666;
+    line-height: 24px;
+}
+.first-l .new .new-list{
+    width: 680px;
+    position: relative;
+}
+.first-l .new .new-list .item img{
+    margin-right: 15px;
+    width: 130px;
+    height: 73px;
+}
+.first-l .new .new-list .item h4 a{
+    color: #333;
+}
+.first-l .new .new-list .item h4 a:hover{
+    color: #ff5000;
+}
+.first-l .new .new-list .item h4{
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.first-l .new .new-list .item p a{
+    color: #666;
+}
+.first-l .new .new-list .item p{
+    line-height: 18px;
+    font-size: 14px;
+}
+.first-l .new .new-list .item .more{
+   position: absolute;
+   right: 0;
+   top: 0;
+}
+.first-l .new .new-list .item .more:hover{
+    color: #ff5000;
+ }
+
+.first-l .new .hd h3{
+    width: 129px;
+    height: 26px;
+    background: url(../img/header.png) no-repeat;
+    background-size: 129px 26px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+/* <!-- 首屏 -->  .first-l 右*/
+.first-r{
+    width: 290px;
+    /* height: 621px; */
+    margin-top: 10px;
+}
+.first-r .user{
+    height: 140px;
+    padding-top: 5px;
+    background-image: url("data:image/png;base64,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");
+    background-size: 100% 100%;
+}
+.first-r .user .user-h{
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.first-r .user .username{
+    text-align: center;
+    line-height: 16px;
+}
+.first-r .user .member{
+    /* display: inline-block; */
+    text-align: center;
+}
+.first-r .user .member a{
+    display: inline-block;
+    border-radius: 9px;
+    padding: 0 10px 0 20px;
+    color: #ff5000;
+}
+.first-r .user .member a.gold{
+    /* 雪碧图 用法 */
+  background: #ffe4dc url(../img/xue_bi.png) 0 -572px no-repeat;
+}
+.first-r .user .member a.club{
+    /* 雪碧图 用法 */
+    background: #ffe4dc url(../img/xue_bi.png) 0 -528px no-repeat;
+  }
+.first-r .user .btn{
+    text-align: center;
+}
+.first-r .user .btn button{
+    width: 75px;
+    height: 25px;
+    line-height: 25px;
+    margin: 12px 2px 0 2px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+      /* IE6 IE7  实现渐变 */
+      filter:  progid:DXImageTransform.Microsoft.gradient( GradientType= 1 , startColorstr = '#ff9000', endColorstr = '#ff5000' ); /* IE6 & IE7 */
+      /* linear-gradien  IE1默以上兼容  认为  to bottom 从上到下 */
+      background-image: linear-gradient(to right,#ff9000,#ff5000);
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      border-radius: 4px;
+}
+.first-r .user .btn button.login{
+    width: 92px;
+}
+.first-r .off{
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    color: #f40;
+    background-color: #ffe4dc;
+    text-align: center;
+    position: relative;
+}
+.first-r .off i{
+    position: absolute;
+    font-size: 12px;
+    right: 30px;
+    vertical-align: -1px;
+}
+.first-r .notice{
+    height: 108px;
+    background-color: #fff;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.first-r .notice .title{
+    text-align: center;
+}
+.first-r .notice .title li{
+    display: inline-block;
+    line-height: 20px;
+    padding: 0 4px;
+    margin: 0 10px;
+}
+.first-r .notice .title li.active{
+    border-bottom: 2px solid #f40;
+    font-weight: bold;
+}
+.first-r .notice .title li a:hover,.first-r .notice .content .active a{
+  color: #f40;
+}
+.first-r .notice .content{
+    margin: 0 12px;
+    padding-top: 10px;
+}
+.first-r .notice .content li{
+    height: 25px;
+    width:100%;
+    line-height: 25px;
+    float: left;
+}
+/* 图标 */
+.first-r .icon{
+    width: 100%;
+    height: 232px;
+    background-color: #fff;
+    /* 定义列宽的算法
+     1 由内容撑开
+     2 fixed 根据父级  宽度均分
+
+    */
+    table-layout: fixed;
+
+}
+.first-r .icon td{
+    border:1px solid #f4f4f4;
+    text-align: center;
+}
+.first-r .icon td span{
+   display: block;
+   width:24px;
+   height: 24px;
+   margin: 0 auto;
+   background: url(../img/xue_bi.png) no-repeat;
+}
+.first-r .icon .item2 span{
+    background-position: 0 -87px;
+}
+.first-r .icon .item3 span{
+    background-position: 0 -44px;
+}
+.first-r .icon .item4 span{
+    background-position: 0 -132px;
+}
+.first-r .icon .item5 span{
+    background-position: 0 -176px;
+}
+.first-r .icon .item6 span{
+    background-position: 0 -220px;
+}
+.first-r .icon .item7 span{
+    background-position: 0 -264px;
+}
+.first-r .icon .item8 span{
+    background-position: 0 -308px;
+}
+.first-r .icon .item9 span{
+    background-position: 0 -352px;
+}
+
+.first-r .icon .item10 span{
+    background-position: 0 -396px;
+}
+.first-r .icon .item11 span{
+    background-position: 0 -440px;
+}
+.first-r .icon .item12 span{
+    background-position: 0 -484px;
+}
+.first-r .app{
+    height: 111px;
+    background-color: #fff;
+}
+.first-r .app .title{
+    height: 30px;
+    line-height: 30px;
+}
+.first-r .app .title h3{
+    font-size: 14px;
+    padding-left: 14px;
+}
+.first-r .app .title a{
+    margin-right: 10px;
+}
+.first-r .app .title a:hover{
+    color: #f40;
+}
+.first-r .app .apps{
+    padding-top: 10px;
+}
+.first-r .app .apps li{
+    float: left;
+}
+.first-r .app .apps li{
+    float: left;
+    margin-right: 8px;
+}
+.first-r .app .apps li img{
+    width: 50px;
+    height: 50px;
+}
+/* <!-- 有好货 --> */
+.goods{
+    width: 590px;
+    height: 658px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.goods .head{
+    height: 24px;
+    margin: 20px 0;
+    padding: 0 20px;
+    line-height: 24px;
+}
+.goods .head h3{
+    font-size: 0;
+    font-weight: normal;
+}
+.goods .head h3 img{
+    height: 24px;
+}
+.goods .head h3 span{
+    vertical-align: middle;
+    color: #ccc;
+    font-size: 20px;
+    margin: 0 5px;
+}
+.goods .head h3 i{
+    font-size: 12px;
+    color: #666;
+    /* 行内级元素垂直居中 */
+    vertical-align: middle;
+}
+.goods .head .change{
+    color: #666;
+}
+.goods .list{
+    font-size: 0;
+    padding-left: 20px;
+}
+.goods .list li{
+    display: inline-block;
+    width: 180px;
+    margin: 0 2px 35px 2px;
+    text-align: left;
+}
+.goods .list li img{
+    width: 180px;
+    height: 180px;
+}
+.goods .list li h4{
+    font-size: 16px;
+    height: 28px;
+    line-height: 28px;
+    font-weight: normal;
+    overflow: hidden;
+}
+.goods .list li h4 a:hover{
+    color: #f40;
+}
+.goods .list li .text{
+    height: 24px;
+    line-height: 24px;
+    color: ;
+    font-size: 14px;
+    overflow: hidden;
+}
+.goods .list li .text a{
+    color: #666;
+}
+.goods .list li .comment{
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    color: #35b1ff;
+    margin-top: 12px;
+}
+.goods .list li .comment span{
+    font-size: 14px;
+    margin-right: 4px;
+}
+/* 爱逛街 */
+.shopping .list li .text{
+    height: 44px;
+    line-height: 22px;
+    font-size: 14px;
+    margin-top: 11px;
+    overflow: hidden;
+}
+.shopping .head i{
+    margin-left: 6px;
+}
+.shopping .list li .text a:hover{
+    color: #f40;
+}
+.shopping .list li .text span{
+    font-size: 14px;
+    color: #ebebeb;
+    position: relative;
+    top: -5px;
+}
+.shopping .list li .comment img{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
+.shopping .list li .comment{
+    color: #666;
+}
+/*  <!-- 右侧固定 --> */
+#rightBar{
+    position: fixed;
+    width: 50px;
+    height: 350px;
+    top: 100px;
+    right: 40px;
+}
+#rightBar span{
+    display: inline-block;
+    font-size: 32px;
+    color: #ff7f13;
+    width: 50px;
+    height: 36px;
+    line-height: 36px;
+    position: absolute;
+    top: -28px;
+    left: 8px;
+}
+#rightBar .group{
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+#rightBar .group a{
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: #fff;
+    /* 遇到空格 强制换行 */
+    word-break: keep-all;
+    padding-top: 6px;
+    box-sizing: border-box;
+}
+#rightBar .group a::after{
+    content: '';
+    border-bottom: 1px solid #efefef;
+    width: 34px;
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+}
+#rightBar .group .item6{
+    line-height: 40px;
+}
+#rightBar .group a:hover,#rightBar .group a.active{
+       /* IE6 IE7  实现渐变 */
+       filter:  progid:DXImageTransform.Microsoft.gradient( GradientType= 1 , startColorstr = '#ff9000', endColorstr = '#ff5000' ); /* IE6 & IE7 */
+       /* linear-gradien  IE1默以上兼容  认为  to bottom 从上到下 */
+       background-image: linear-gradient(135deg,#ff9000,#ff5000);
+       color: #fff;
+       font-weight: bold;
+}
+#rightBar .group a:hover::after,#rightBar .group a.active::after{
+    border: none;
+}
