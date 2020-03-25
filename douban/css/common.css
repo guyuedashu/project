@@ -1,0 +1,127 @@
+/* 通用样式 */
+/* ------------------------------预定义样式------------------------ */
+/* 清除浮动  三件套 */
+.clear-float::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.leayer{
+    width: 1190px;
+    margin: 0 auto;
+}
+.margin-top-10{
+    margin-top: 10px;
+}
+.margin-left-10{
+    margin-left: 10px;
+}
+.mr-7{
+    margin-right:7px;
+}
+/* ------------------------------预定义样式------------------------ */
+
+h2{
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 150%;
+}
+
+a.blue{
+    color: #669;
+    font-size: 12px;
+}
+
+a:hover{
+    background-color: #37a !important;
+    color:#fff !important;
+}
+.wrapper{
+    width: 950px;
+    margin: 0 auto;
+}
+h2 span{
+    font-size: 12px;
+}
+.section{
+    padding: 10px 0;
+    margin-bottom: 30px;
+    min-height: 200px;
+}
+.section:nth-child(2n -1){
+    padding: 40px 0 20px;
+    background-color: #f7f7f7;
+}
+a{
+    font-family:Helvetica, Arial, sans-serif;
+}
+.scoreStar{
+    display: inline-block;
+    background: url(../img/star.png) no-repeat;
+    width: 55px;
+    height: 11px;
+    margin: 0 3px 0 0;
+}
+
+.sideNav{
+    float: left;;
+    width: 100px;
+    margin-right: 20px;
+}
+.sideNav h2 a{
+    margin-top: 5px;
+    font-size: 24px;
+}
+.sideNav ul li{
+    margin-top: 5px;
+}
+.sideNav ul li a{
+    font-size: 14px ;
+    font-weight: 400;
+}
+.side{
+    
+    float: right;;
+    width: 265px;
+  
+
+}
+.main{
+    overflow: hidden;
+    
+}
+
+img{
+    margin-bottom: 10px;
+}
+
+a.btn{
+    display: inline-block
+}
+.m-b-4{
+    margin-bottom: 4px;
+
+}
+.list-common{
+    font-size: 0;
+}
+.list-common li {
+    display: inline-block;
+    width: 24.8%;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    vertical-align: top;
+}
+
+ul.list-common  {
+    margin-top: -40px;
+    margin-bottom: 30px;
+}
